@@ -1,4 +1,4 @@
-package com.japanese.appliaction.service;
+package com.japanese.appliaction.service.serviceInterface;
 
 import com.japanese.appliaction.model.User;
 
