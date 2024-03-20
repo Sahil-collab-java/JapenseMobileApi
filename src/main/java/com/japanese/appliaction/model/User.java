@@ -27,11 +27,10 @@ public class User {
     private String mobileNumber;
     private boolean emailVerified;
     private String role;
-    
+   
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDate date;
     private boolean Flag;
-
 
 }
