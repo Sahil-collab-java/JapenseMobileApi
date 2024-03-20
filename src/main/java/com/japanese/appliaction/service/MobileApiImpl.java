@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.japanese.appliaction.model.User;
 import com.japanese.appliaction.repository.UserMobileRepo;
+import com.japanese.appliaction.service.serviceInterface.MobileApi;
 
 @Service
 public class MobileApiImpl implements MobileApi {
