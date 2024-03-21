@@ -61,12 +61,12 @@ public class BatchesController {
 	 
 	 //Find Batch By id
 	 @PostMapping("/getBatchesDataById/{id}")
-	    public ResponseEntity<Batches> getBatchDataById(@PathVariable("id") Long id) {
+	    public ResponseEntity<?> getBatchDataById(@PathVariable("id") Long id) {
 	        Batches batch = batchesImpl.findById(id);
 	        if (batch != null) {
 	            return ResponseEntity.status(HttpStatus.OK).body(batch);
 	        } else {
-	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Batch with ID " + id + " not found");
 	        }
 	    }
 	
