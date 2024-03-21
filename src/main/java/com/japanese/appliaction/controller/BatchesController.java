@@ -66,7 +66,9 @@ public class BatchesController {
 	        if (batch != null) {
 	            return ResponseEntity.status(HttpStatus.OK).body(batch);
 	        } else {
+
 	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Batch with ID " + id + " not found");
+
 	        }
 	    }
 	
