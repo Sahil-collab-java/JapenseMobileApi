@@ -35,24 +35,24 @@ public class RolesController {
 	}
 	
 	//Find Role by Id 
-	@PostMapping("/getRolesDataById/{id}")
-	   public ResponseEntity<Roles> getRoleData(@PathVariable("id") Long id){
-		Roles role = roleApiImpl.findById(id);
-		if(role != null) {
-			 return ResponseEntity.status(HttpStatus.OK).body(role);
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
-	}
+	 @PostMapping("/getRolesDataById/{id}")
+	    public ResponseEntity<?> getRoleData(@PathVariable("id") Long id) {
+	        Roles role = roleApiImpl.findById(id);
+	        if (role != null) {
+	            return ResponseEntity.status(HttpStatus.OK).body(role);
+	        } else {
+	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Role with ID " + id + " not found");
+	        }
+	    }
 	
 	//Update Roles Data
 	@PostMapping("/editRoles/{id}")
 	public ResponseEntity<String> editRoleDetails(@PathVariable ("id") Long id,@RequestBody Roles roles ){
 		boolean updateRole = roleApiImpl.editRole(id,roles);
 		if(updateRole) {
-			 return ResponseEntity.status(HttpStatus.OK).body("Data Deleted Successfully");
+			 return ResponseEntity.status(HttpStatus.OK).body("Data Update Successfully !!!");
 	     } else {
-	         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Batch not found or delete failed");
+	         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Role not found or Update failed");
 	     }
 	}
 	
