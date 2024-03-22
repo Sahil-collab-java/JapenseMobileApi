@@ -32,8 +32,9 @@ public class BatchesController {
 	//Baches List
 	@GetMapping("/getAllBatchesData")
 	@ResponseBody
-    public List<Batches> getAllData() {
-        return batchesImpl.findAll();
+    public ResponseEntity<List<Batches>>  getAllData() {
+		return ResponseEntity.status(HttpStatus.OK).body(batchesImpl.findAll());
+       
     }
 	
 	//update Batches

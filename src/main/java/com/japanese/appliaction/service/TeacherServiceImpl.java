@@ -11,6 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.japanese.appliaction.model.Teacher;
 import com.japanese.appliaction.repository.TeacherRepo;
+import com.japanese.appliaction.service.serviceInterface.TeacherService;
 
 @Service
 public class TeacherServiceImpl implements TeacherService {

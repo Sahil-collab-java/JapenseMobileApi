@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.japanese.appliaction.model.Roles;
 import com.japanese.appliaction.repository.RolesRepo;
+import com.japanese.appliaction.service.serviceInterface.RoleApi;
 
 
 @Service

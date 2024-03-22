@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.japanese.appliaction.model.Batches;
 import com.japanese.appliaction.repository.BatchesRepo;
+import com.japanese.appliaction.service.serviceInterface.BatchesApi;
 
 
 
