@@ -30,8 +30,8 @@ public class RolesController {
 	//Find All Roles 
 	@GetMapping("/getRolesData")
 	@ResponseBody
-	public List<Roles> getAllRoles(){
-		return roleApiImpl.findAll();
+	public ResponseEntity< List<Roles>>  getAllRoles(){
+		return ResponseEntity.status(HttpStatus.OK).body(roleApiImpl.findAll());
 	}
 	
 	//Find Role by Id 
